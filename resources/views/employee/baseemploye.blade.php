@@ -57,16 +57,16 @@
                           </tr>
                     </thead>
                     <tbody>
-                       {{-- foreach buat nampilin semua data --}}
-                       {{-- @foreach ($Employee as $row)
+                      
+                       @foreach ($employe as $row)
                           <tr>
                             <td>{{$loop->iteration}}</td>
+                            <td>{{$row->nomor}}</td>
                             <td>{{$row->nama}}</td>
-                            <td>{{$row->deskripsi}}</td>
-                            <td>{{$row->filters->filter}}</td>
-                            <td>{{$row->tutorial}}</td>
-                            <td>{{$row->link_yt}}</td>
-                            <td>{{ $row->created_at->format('d M Y') }}</td>
+                            <td>{{$row->jabatan}}</td>
+                            <td>{{$row->talahir}}</td>
+                            <td>{{$row->photo_upload_path}}</td>
+                            <td>{{ $row->created_at}}</td>
                             <td>
                              <a href="" class="btn btn-secondary">Edit</a>
                          </td>
@@ -74,8 +74,8 @@
                             <a href="" data-toggle="modal" data-target="#delete{{$row->id}}" class="btn btn-danger">Delete</a>
                          </td>
                           </tr>
-                          @include('Employee.deleteEmployee')
-                      @endforeach --}}
+                          @include('employee.deleteemploye')
+                      @endforeach
                       </tbody> 
                 </table>
             </div>

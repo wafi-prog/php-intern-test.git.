@@ -32,4 +32,12 @@ class EmployeController extends Controller
         ]);
         return redirect()->back()->with('Create',"Berhasil menambah data");
     }
+
+     public function deleteemploye(Request $request){
+
+        $employe = Employe::findOrFail($request->id);
+        $employe->delete();
+        return redirect()->back()->with('Delete',"Berhasil menghapus data");
+        
+    }
 }
